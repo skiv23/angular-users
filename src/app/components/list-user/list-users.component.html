@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let user of users">
+        <a href="#" (click)="setSelected($event, user.id)">
+            {{ user.email }}
+        </a>
+    </li>
+</ul>
+<user-details *ngIf="selectedUserId" [userId]="selectedUserId"></user-details>

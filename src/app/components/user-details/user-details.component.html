@@ -1,0 +1,8 @@
+<h2>Selected User:</h2>
+<div *ngIf="user">
+    <ul>
+        <li><img src="{{ user.avatar }}" alt=""></li>
+        <li>{{ user.first_name }} {{ user.last_name }}</li>
+        <li>{{ user.email }}</li>
+    </ul>
+</div>
