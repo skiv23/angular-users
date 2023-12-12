@@ -1,0 +1,32 @@
+<ul>
+    <li *ngFor="let user of (users$ | async)">
+        <a href="#" (click)="setSelected($event, user.id)">
+            {{ user.email }}
+        </a>
+        <button (click)="onRemove(user.id)" data-test="remove-button">Remove</button>
+    </li>
+</ul>
+<user-details *ngIf="selectedUserId" [userId]="selectedUserId"></user-details>
+
+<form>
+    <div>
+        <label for="first_name">
+          First Name
+        </label>
+        <input id="first_name" type="text" formControlName="first_name" #firstName>
+      </div>
+      <div>
+        <label for="last_name">
+          Last Name
+        </label>
+        <input id="last_nameme" type="text" formControlName="last_name" #lastName>
+      </div>
+    
+      <div>
+        <label for="email">
+          Email
+        </label>
+        <input id="email" type="email" formControlName="email" #email>
+      </div>
+    <button class="button" type="button" (click)="onAdd(firstName.value, lastName.value, email.value)">Add User</button>
+</form>

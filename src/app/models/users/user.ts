@@ -1,9 +1,12 @@
-export interface User {
-  id: number
+export interface BaseUser {
   email: string
-  avatar: string
+  avatar?: string
   first_name: string
   last_name: string
+}
+
+export interface User extends BaseUser {
+  id: number
 }
 
 export interface UserListResponse {

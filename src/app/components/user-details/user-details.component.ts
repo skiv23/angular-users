@@ -1,7 +1,7 @@
 import { Component, Input, type SimpleChanges } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterOutlet } from '@angular/router'
-import { type User } from '../../services/users/user'
+import { type User } from '../../models/users/user'
 import { UserService } from '../../services/users/service'
 
 @Component({
